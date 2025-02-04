@@ -1,0 +1,27 @@
+body {
+    background-color: azure;
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #0A395E;
+    color: azure;
+    padding: 20px;
+    text-align: center;
+}
+header{
+    padding-top: 20px;
+}
+
+a {
+    color: #FF6A00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a:hover {
+    color: #FFD700;
+}
