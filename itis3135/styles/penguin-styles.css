@@ -1,0 +1,90 @@
+/* Body Styling */
+body {
+  background-color: #F8F5F1; /* Ivory White for the background */
+  color: #4A4A4A; /* Rich Charcoal for text */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #1C1C1C; /* Midnight Black for header background */
+  color: #7B9EFF; /* Royal Blue for header text */
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Main Content Styling */
+main {
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main h2 {
+  color: #7B9EFF; /* Royal Blue for heading */
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+main p {
+  color: #4A4A4A; /* Rich Charcoal for paragraph text */
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #1C1C1C; /* Midnight Black for footer background */
+  padding: 10px;
+  text-align: center;
+}
+
+footer nav a {
+  color: #7B9EFF; /* Royal Blue for footer links */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+footer p {
+  color: #7B9EFF; /* Royal Blue for footer text */
+  padding-right: 45px;
+}
+
+footer nav a:hover {
+  color: #003F87; /* Cobalt Blue on hover for links */
+}
+
+/* General Link Styling */
+a {
+  color: #003F87; /* Cobalt Blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7B9EFF; /* Royal Blue on hover */
+}
+
+/* Utility Classes */
+.main-class {
+  margin: 0 auto;
+}
+
+.about-header {
+  padding: 0 20px;
+  font-size: medium;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
