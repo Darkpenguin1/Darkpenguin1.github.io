@@ -1,16 +1,15 @@
-/* Body Styling */
+
 body {
-  background-color: #F8F5F1; /* Ivory White for the background */
-  color: #4A4A4A; /* Rich Charcoal for text */
+  background-color: #F8F5F1; 
+  color: #4A4A4A; 
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Header Styling */
 header {
-  background-color: #1C1C1C; /* Midnight Black for header background */
-  color: #7B9EFF; /* Royal Blue for header text */
+  background-color: #1C1C1C; 
+  color: #7B9EFF; 
   padding: 20px;
   text-align: center;
 }
@@ -21,7 +20,7 @@ header h1 {
   font-weight: bold;
 }
 
-/* Main Content Styling */
+
 main {
   margin: 0 auto;
   padding: 40px 20px;
@@ -29,53 +28,52 @@ main {
 }
 
 main h2 {
-  color: #7B9EFF; /* Royal Blue for heading */
+  color: #7B9EFF;
   font-size: 30px;
   margin-bottom: 20px;
 }
 
 main p {
-  color: #4A4A4A; /* Rich Charcoal for paragraph text */
+  color: #4A4A4A; 
   font-size: 18px;
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Footer Styling */
+
 footer {
-  background-color: #1C1C1C; /* Midnight Black for footer background */
+  background-color: #1C1C1C;
   padding: 10px;
   text-align: center;
 }
 
 footer nav a {
-  color: #7B9EFF; /* Royal Blue for footer links */
+  color: #7B9EFF;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
 }
 
 footer p {
-  color: #7B9EFF; /* Royal Blue for footer text */
+  color: #7B9EFF; 
   padding-right: 45px;
 }
 
 footer nav a:hover {
-  color: #003F87; /* Cobalt Blue on hover for links */
+  color: #003F87; 
 }
 
-/* General Link Styling */
 a {
-  color: #003F87; /* Cobalt Blue for links */
+  color: #003F87; 
   text-decoration: none;
 }
 
 a:hover {
-  color: #7B9EFF; /* Royal Blue on hover */
+  color: #7B9EFF;
 }
 
-/* Utility Classes */
+
 .main-class {
   margin: 0 auto;
 }
@@ -87,4 +85,8 @@ a:hover {
 
 h1, h2, h3 {
   text-align: center;
+}
+
+q {
+  font-style: italic;
 }
