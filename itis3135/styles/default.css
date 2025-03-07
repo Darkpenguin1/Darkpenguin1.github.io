@@ -25,3 +25,28 @@ a {
 a:hover {
     color: #FFD700;
 }
+
+main {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+			max-width: 1200px;
+			width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  main {
+    max-width: 1000px;
+		width: 85%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+	main {
+		max-width: 100%; 
+		width: 100%;
+	}
+}
