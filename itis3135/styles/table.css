@@ -67,3 +67,18 @@ table {
   margin: 10px 50px;
   border-spacing: 5px;
 }
+
+
+table tr:nth-child(odd) {
+	background-color: darkgrey;
+}
+
+table tr:nth-child(even) {
+	background-color: lightgray; 
+}
+
+
+table tr:nth-child(1) {
+	background-color: #36454f;
+	color: white; 
+}

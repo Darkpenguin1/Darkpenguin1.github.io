@@ -67,3 +67,57 @@ table {
   margin: 10px 50px;
   border-spacing: 5px;
 }
+
+form {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* Two columns: labels and inputs */
+  gap: 30px 20px; 
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto; 
+	padding: 22px 0px;
+}
+
+label {
+  text-align: right; 
+}
+
+input {
+  padding: 5px;
+}
+
+.check-box-container {
+	grid-column: span 2;
+	text-align: center;	
+	padding: 5px;
+}
+
+/*Code is terrible but works*/
+#courses-div {
+  display: none; 
+}
+
+#hidden-div {
+  display:none;
+}
+
+
+img {
+  width: 25%;
+  height: 25%;
+  clip-path: circle(45%);
+  display: inline-block;
+  margin: 0 auto;
+}
+figcaption {
+  padding-top: 5px;
+  font-style: italic;
+}
+
+ul {
+  list-style-position: inside;
+  display: inline-block;
+}
+li {
+  padding: 5px;
+}

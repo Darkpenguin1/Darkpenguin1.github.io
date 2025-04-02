@@ -9,10 +9,10 @@
   <style>
     body {
       background-color: #E2F0D9;
-      margin: 0;
-      text-align: center;
+      margin: 0px auto;
       color: #333333;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding: 0px;
     }
 
     header, footer {
@@ -21,22 +21,130 @@
       padding: 20px;
       text-align: center;
     }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p, ul {
+      padding: 0px 50px;
+      margin-top: 0;
+    }
+
     header{
       padding-top: 20px;
     }
 
     a {
-      color: #8FBC8F;
+      color: #008080;
       text-decoration: none;
       margin: 0 10px;
     }
 
     a:hover {
-      color: #FFD700;
+      color: #025555;
     }
 
-    main {
+    
+
+    .section-header{
+      padding: 0px 50px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .footer-p {
+      margin: 0px;
+    }
+    strong {
+      font-weight: bold;
+    }
+
+    figure {
+      display: inline-block;
+      margin: 5px;
+    }
+    figure img {
+      width: 400px;
+      height: 400px;  
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .figure-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 0px; 
+      justify-items: center; 
+    }
+
+    .figure-block {
+      text-align: center; /* Ensures the figure and text are centered */
+    }
+
+    .figure-block p {
+      
+      margin-bottom: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .centered-figure {
+      display: block;
+      justify-content: center;
+      text-align: center;
+      
+    }
+
+    table, th, td {
+      border: 1px solid;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+      padding-right: 100px;
+    }
+    table {
+      margin: 10px 50px;
+      border-spacing: 5px;
+    }
+
+    form {
+      padding: 2px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 50%;
+      align-items: center;
       margin: 0 auto;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-right: 2px;
+    }
+
+    .form-border {
+      border: 1px solid;
+      margin-bottom: 50px;
+      padding: 2px;
+    }
+
+    label {
+      padding-right: 5px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -44,6 +152,7 @@
         max-width: 1200px;
         width: 80%;
       }
+      
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -59,6 +168,16 @@
         width: 100%;
       }
     }
+
+    @media screen and (max-width: 767px) {
+      .figure-container {
+        grid-template-columns: 1fr; 
+      }
+
+      .figure-block p {
+        padding: 10px 20px; 
+      }
+    }
   </style>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -66,33 +185,548 @@
 
   <header>
     <h1>
-      Fitness With Frank!
+      Weight Lifting With Frank!
     </h1>
-    header text
+    
+    <nav>
+      <a href="#" onclick="showSection('what')">What</a>
+      ❚█══█❚
+      <a href="#" onclick="showSection('who')">Who</a> 
+      ❚█══█❚
+      <a href="#" onclick="showSection('when')">When</a>
+      ❚█══█❚
+      <a href="#" onclick="showSection('where')">Where</a>
+      ❚█══█❚
+      <a href="#" onclick="showSection('how')">How</a>
+      ❚█══█❚
+      <a href="#" onclick="showSection('why')">Why</a>
+      
+    </nav>
+    
   </header>
 
 
   <main>
+    <section id="what" class="active">
+      <h2>What is Weight Lifting?</h2>
+      <p>Weight Lifting sounds pretty straightforward...picking up weight, but it can be suprisingly complex. 
+        Weight lifting entails strength training through a variety of forms of resistance such as free weights, bands or machines 
+        to build muscle and improve physical wellness.
+        
+        
+      </p>
 
-    <h2>RANDOM SAMPLE TEXT IN MAIN</h2>
-    main text
+      <h3 class="section-header">Types of weight lifting?</h3>
+      <ul>
+        <li><strong>Power Lifting:</strong> Involves lifting the most weight possible.</li>
+        <li><strong>Bodybuilding:</strong> Involves lifting weight to maximize hypertrophy (growth) focusing on aesthetics and muscle definition.
+        </li>
+        <li><strong>Olympic Lifting:</strong> Involves two primary movements: the snatch and the clean & jerk. This type focuses on explosive power and technique.</li>
+      </ul>
 
-    <a href="">LINK TEST</a>
+      <div class="figure-container">
+        <div class="figure-block">
+          <figure>
+            <img src="Designer.png" alt="Image of a deadlift demonstration">
+            <figcaption><em>Image of a Deadlift Demonstration, a key powerlifting movement</em></figcaption>
+          </figure>
+          <p><em>Generate an image of powerlifting</em></p>
+        </div>
+      
+        <div class="figure-block">
+          <figure>
+            <img src="Designer1.jpeg" alt="Image of a body builder">
+            <figcaption>A image of a body builder prioritizing looks over strength</figcaption>
+          </figure>
+          <p><em>Generate an image of bodybuilding</em></p>
+        </div>
+      
+        <div class="figure-block">
+          <figure>
+            <img src="Designer2.jpeg" alt="Image of an Olympic lifter">
+            <figcaption>An image of an Olympic lifter performing a snatch</figcaption>
+          </figure>
+          <p><em>Generate an image of Olympic lifting</em></p>
+        </div>
+      </div>        
+    </section>
+
+    <section id="who" class="hidden">
+      <h2>About Me</h2>
+      <p>Hello I am Frank! I started weight lifting around 2020 during the covid era in highschool.
+        One day clocking 10 hour shifts on my xbox became mundane so I got attracted to fitness. 
+        Fitness has become a essential and crucial part of my life as I have explored different types of weight lifting 
+        such as the ones stated on the "home" page. My love for fitness is derived from the love of continuous improvement.
+        Day after day putting in the work you can both visibly and mentally feel yourself getting better. 
+        Wether it be increasing the amount of weight you are pushing or seeing a bicep vein the work is rewarding. 
+        The way fitness impacts my daily life is that its something I complete everyday that is productive,  
+        I could have an absolutely terrible day but at the very least I got a workout in which is better than most. 
+        
+      </p>
+      <h3 class="section-header">Fitness Journey Highlights</h3>
+      <table>
+        <tr>
+          <th>Milestone</th>
+          <th>Details</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>First Squat PR</td>
+          <td>Squatted 295 lbs</td>
+          <td>2024</td>
+        </tr>
+        <tr>
+          <td>First Deadlift PR</td>
+          <td>Deadlifted 315 lbs</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>Weight Progress</td>
+          <td>Gained from 128 lbs to 175 lbs</td>
+          <td>2020-2024</td>
+        </tr>
+        <tr>
+          <td>Bench Press PR</td>
+          <td>Benched 235 lbs</td>
+          <td>2024</td>
+        </tr>
+      </table>
+      
+      <h3 class="section-header">Transformation Progress</h3>
+      <ul>
+        <li>Started with lifting basic weights at home with minimal equipment during the pandemic.</li>
+        <li>Progressed to lifting an 295 squat, 235 bench, and a 315 deadlift.</li>
+        <li>Progressed in weight from 128lbs to 175lbs being fairly lean</li>
+      </ul>
+      
+      <div class="figure-block">
+        <figure class="centered-figure">
+          <img src="Designer3.jpeg" alt="candid image of a me lifting weights">
+          <figcaption>Stand In Picture Of Me Lifting Weights</figcaption>
+        </figure>
+        <p><em>
+          Generate an image of a man lifting weights in the gym that will use as a candid standin photo 
+          for a picture of me in a web page that talks about my weight lifting hobby. 
+          Do not give it a skin color just use a stick figure image
+        </em></p>
+    </div>
+
+    </section>
+
+    <section id="when" class="hidden">
+      <h2>Best Times to Workout</h2>
+      <p>
+        What time should you workout? The time you workout impacts so much more than you think. 
+        If you go to the gym early in the morning and you are not a morning person more than likely you are 
+        setting yourself up for failure. However also going to the gym at common times such as 5pm or 6pm
+        you are going to be waiting a long time to do exercises that you want to do. The gym will be packed
+        and you'll lose your muscle pump because of the amount of time you are waiting to use a machine or weight. 
+        You CAN workout at night such as 8pm and onward but if you take caffeine such as preworkout you will be bouncing off the 
+        walls trying to fall asleep. Caffeine takes a long time to clear from your system you have to be mindful of the amount and 
+        time you consume it at. 
+
+        <br>
+        <br>
+
+        Finishing this yap session what is the main take away?
+        
+        <br>
+
+        The MAIN take away is that the best time to workout depends 100% on your situation when you work the best 
+        and what other responsiblities you have to juggle alongside your weight lifting goals. 
+      </p>
+
+      <h3 class="section-header">Why I Workout @ 7AM </h3>
+      <p>
+        I prefer working out at 7 AM because it sets me up for a productive day. The gym is less crowded, 
+        and I can focus on my routine without long wait times for equipment. After my workout, I feel energized 
+        and ready to tackle the rest of my day, whether it's classes or projects. Not only that but waking up at 
+        6:30 forces me to sleep at a reasonable time and gives me something to look forward to when I begin each day.
+      </p>
+
+      <div class="figure-block">
+        <figure class="centered-figure">
+          <img src="Designer4.jpeg" alt="Early Morning Gym Image">
+          <figcaption>A morning workout can help boost your energy and set a productive tone for the day.</figcaption>
+        </figure>
+        <p><em>
+          Generate a image of a gym during sunrise with people working out, calm morning atmosphere.
+        </em></p>
+      </div>
+
+    
+
+      
+
+      <h3 class="section-header figure-block">What Time Do You Workout?</h3>
+      <form class="form-border">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="enter your name....">
+        </div>
+        <div class="form-group">
+          <label for="name">Email:</label>
+          <input type="email" id="email" name="email" placeholder="enter your email....">
+        </div>
+        
+        <div class="form-group">
+          <label for="time">Best Workout Time:</label>
+          <select id="time" name="time">
+          <option value="">Select</option>
+          <option value="early-morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="evening">Evening</option>
+        </select>
+        </div>
+        
+        <input type="submit" value="Submit">
+      </form>
+    
+    
+    </section>
+    <section id="where" class="hidden">
+      <h2>Where To Workout?</h2>
+      <p>
+        You Can Workout literally anywhere, the most common places are the gym and at home. 
+        I personally started working out at home doing the basics: pushups, jumping jacks, squats and pullups with equipment.
+        Moving to the gym a whole new world opens up, in this following sections I will be exploring the pros and cons
+        of working out at the gym and at home!
+      </p>
+
+      <div class="figure-block">
+        <figure class="centered-figure">
+          <img src="Designer6.jpeg" alt="Image of home serving as a gym">
+          <figcaption>Working out from home can be just as effective as going to the gym!</figcaption>
+        </figure>
+        <p><em>
+          Generate an image of a home gym or a simple at home workout that will be used on a webpage
+        </em></p>
+      </div>
+      <h3 class="section-header">At Home</h3>
+      <p>
+        Working out at home has numerous benefits varying from being in the privacy of your own home. 
+        To not having to deal with some of the annoying social aspects such as loud grunting or weights falling to the ground. 
+        Another benefit that working out from home has is that your home is always open and you can workout whenever, its not 
+        like the gym where you have a time restriction. In the <q>When</q> section of my page I spoke about 
+        the time you go to the gym and how much it matters because of how crowded the gym can get at times. 
+        Well you never have to experience that when you are working out from home. Going to the gym or other 
+        establishments costs money working out at home is 100% free with the exception of building a home gym
+        and buying free weights you can get a perfectly good workout with just your body! 
+        
+        Working out from home is great however it does have some pitfalls such as, not being able to do certain exercises
+        because of the lack of equipment. For example the amount of back exercises or leg exercises you can do is limited 
+        when you are working out at home compared to the gym or another place with equipment. 
+        Another downside of working out at home is the lack of social interaction, to some this may seem like a benefit
+        but depending on your lifestyle if you are constantly alone being in a social space will boost your social life!
+
+        The final con of working out at home are the distractions you are surrounded by them. At any time 
+        you can walk up to your bed and nap completely ignoring your workout. 
+      </p>
+      <h4 class="section-header">Pro's Summarized List</h4>
+      <ul>
+        <li>Privacy</li>
+        <li>No Time Restrictions</li>
+        <li>No Crowds</li>
+      </ul>
+      <h4 class="section-header">Con's Summarized List</h4>
+      <ul>
+        <li>Lack Of Equipment</li>
+        <li>Lack Of Social Interactions</li>
+        <li>Surrounded By Distractions</li>
+      </ul>
+
+
+      <div class="figure-block">
+        <figure class="centered-figure">
+          <img src="Designer5.jpeg" alt="Image of a gym">
+          <figcaption>Going to a gym opens up doors to new exercises and people!</figcaption>
+        </figure>
+        <p><em>
+          Generate an image of the gym that will be used on a webpage
+        </em></p>
+      </div>
+      <h3 class="section-header">The Gym</h3>
+      <p> 
+        Working out at the gym comes with its own set of advantages, primarily the wide variety of equipment available to target every muscle group. 
+        Whether it's free weights, machines, or cardio equipment, the gym provides the tools to achieve a well-rounded workout. 
+        Another significant pro is the professional atmosphere—the gym is a dedicated space for fitness, which can help mentally separate workout time from personal time. 
+        Additionally, the gym often offers classes and group workouts that provide structure, guidance, and motivation, something you don't get when working out at home. 
+        Having access to personal trainers also adds an element of expertise that can improve form and help you achieve your goals faster. 
+        However, there are some drawbacks to working out in the gym as well. 
+        One of the most common is the time commitment—getting to and from the gym can take time out of your day, not to mention gym hours and membership fees. 
+        It can also get crowded, especially during peak hours, which may limit access to equipment or make the experience less enjoyable. 
+        Some gyms may not be as clean as you'd like, or you might find it uncomfortable sharing equipment with others. 
+        Another downside is the pressure of gym culture; for some, the social aspect of the gym can be intimidating, making it harder to focus or feel confident during workouts. 
+        Lastly, depending on your goals, the gym might not always provide the quiet, personal environment some people need to fully concentrate on their workout.
+      </p>
+      <h4 class="section-header">Pro's Summarized List</h4>
+      <ul>
+        <li>Wide Variety Of Equipment</li>
+        <li>Professional Atmosphere</li>
+        <li>Access To Personal Trainers</li>
+      </ul>
+      <h4 class="section-header">Con's Summarized List</h4>
+      <ul>
+        <li>Commuting</li>
+        <li>Crowded</li>
+        <li>Gym culture and social pressure can make some feel uncomfortable or distracted</li>
+      </ul>
+
+    </section>
+
+    <section id="how" class="hidden">
+      <h2>How To Get Started?</h2>
+      <p>
+        You can get started working out in either settings stated in the previous section (at home/gym). 
+        Now that you are there you may be asking yourself, what now? 
+        Firstly to begin I would reccomend creating goals or a plan for why you are working out and what you want to achieve.
+        Lifting weights without a goal is still great for your health and general wellness but it is similar to driving 
+        without a destination. 
+
+        Often times when people get started within the gym they create a workout plan/split. 
+        A workout schedule that can be easily repeated and works well with there body. The most common 
+        workout splits are in table below. 
+      </p>
+
+      <h3 class="section-header">Push-Pull-Legs Example</h3>
+
+      <table>
+        <tr>
+          <th>Push</th>
+          <th>Pull</th>
+          <th>Legs</th>
+        </tr>
+        <tr>
+          <td>Flat Bench Press</td>
+          <td>Rows</td>
+          <td>Bar Bell Squats</td>
+        </tr>
+        <tr>
+          <td>Incline Dumb Bell Press</td>
+          <td>Pull-Ups</td>
+          <td>Deadlifts</td>
+        </tr>
+        <tr>
+          <td>Pec Flies</td>
+          <td>Lat Pull Downs</td>
+          <td>Bulgarian Split Squats</td>
+        </tr>
+        <tr>
+          <td>Decline Chest Press</td>
+          <td>Single Hand Attached Rows</td>
+          <td>Quad Extensions</td>
+        </tr>
+        <tr>
+          <td>Tricep Pull Downs</td>
+          <td>Incline Curls</td>
+          <td>Hamstring Curls</td>
+        </tr>
+        <tr>
+          <td>Skull Crushers</td>
+          <td>Preacher Curls</td>
+          <td>Single Leg: Leg Press</td>
+        </tr>
+        <tr>
+          <td>One Handed Tricep Pull Downs</td>
+          <td>Hammer Curls</td>
+          <td>Calf Raises</td>
+        </tr>
+      </table>
+    
+      <h3 class="section-header">Arnold Split Example</h3>
+      <table>
+        <tr>
+          <th>Chest & Back</th>
+          <th>Arms</th>
+          <th>Legs</th>
+        </tr>
+        <tr>
+          <td>Flat Bench Press</td>
+          <td>Lateral Shoulder Raises</td>
+          <td>Bar Bell Squats</td>
+        </tr>
+        <tr>
+          <td>Rows</td>
+          <td>Shoulder Press</td>
+          <td>Deadlifts</td>
+        </tr>
+        <tr>
+          <td>Incline Dumbell Press</td>
+          <td>Incline Bicep Curls</td>
+          <td>Bulgarian Split Squats</td>
+        </tr>
+        <tr>
+          <td>Lat Pull Downs</td>
+          <td>Preacher Curls</td>
+          <td>Quad Extensions</td>
+        </tr>
+        <tr>
+          <td>Pull-Ups</td>
+          <td>Tricep Pull Down</td>
+          <td>Hamstring Curls</td>
+        </tr>
+        <tr>
+          <td>Decline Chest Press</td>
+          <td>Skull Crushers</td>
+          <td>Single Leg: Leg Press</td>
+        </tr>
+        <tr>
+          <td>Single Arm Cable Rows</td>
+          <td>Single Tricep Pull-Downs</td>
+          <td>Calf Raises</td>
+        </tr>
+      </table>
+      
+      <h3 class="section-header">I Made My Plan What Now?</h3>
+      <p>
+        After you have made your plan all you have to do is take the first step. Workout, just do the thing! 
+        You dont always have to stick to the exercises within your workout plan because you are likely a begginer
+        find the exercises that are fun and beneficial to you! If you have any questions about your form 
+        on a particular exercise the easiest thing to do is to look up a video on correct form for the exercise 
+        you have questions about, and videotape yourself doing the same exercise to compare and contrast the two. 
+      </p>
+      <h3 class="section-header">Compound Movements</h3>
+      <p>
+        Compound movements are the movements you should prioritize earlier on within your exercise. Why? Because 
+        They work multiple muscles in one movement. Putting more energy towards these compound movements will 
+        get the most bang for your buck energy wise. The 3 main compound movements you should seek to master are the following
+        Squat, Bench and Deadlift. 
+      </p>
+
+      <div class="figure-container">
+        <div class="figure-block">
+          <figure>
+            <img src="Designer3.jpeg" alt="Image of a Squat demonstration">
+            <figcaption><em>Image of a Squat Demonstration</em></figcaption>
+          </figure>
+          <p><em>Generate an image of a stick figure Squatting</em></p>
+        </div>
+
+        <div class="figure-block">
+          <figure>
+            <img src="Designer7.jpeg" alt="Image of a Bench Press demonstration">
+            <figcaption><em>Image of a Bench Press Demonstration</em></figcaption>
+          </figure>
+          <p><em>Generate an image of a stick figure Demonstrating a Bench Press</em></p>
+        </div>
+        
+        <div class="figure-block">
+          <figure>
+            <img src="Designer.png" alt="Image of a deadlift demonstration">
+            <figcaption><em>Image of a Deadlift Demonstration</em></figcaption>
+          </figure>
+          <p><em>Generate an image of powerlifting</em></p>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <section id="why" class="hidden">
+      <h2>Why Should You Lift Weights</h2>
+      <div class="figure-block">
+        <figure class="centered-figure">
+          <img src="Designer8.jpeg" alt="Why should you workout infographic">
+          <figcaption>There are numerous benefits to working out!</figcaption>
+        </figure>
+        <p><em>
+          Create a image/info graphic of the reasons why someone should lift weights this infographic will be on a webpage about why someone should lift weights
+        </em></p>
+      </div>
+      
+      <h3 class="section-header">Why?</h3>
+      <ul>
+        <li>
+          Confidence: Going to the gym will boost your confidence ten fold.
+          You will look better, feel better, and most of all be able to push yourself to go further even when things are hard. 
+        </li>
+        <li>
+          Health: Your general health and wellness will increase because of this new physical activity that you will be doing. 
+        </li>
+        <li>
+          Discipline and Routine: Incorporating weight lifting into your routine fosters discipline, structure, and healthy habits that extend into other areas of life.
+        </li>
+        <li>
+          Longevity: Studies show that people who regularly lift weights may increase their lifespan due to improved overall health and resilience.
+        </li>
+      </ul>
+      <h3 class="section-header">Why do I workout?</h3>
+      <p>
+        I started working out because it empowered me to do more and improve myself. 
+        Before It felt like I was driving without a destination no goals or area to improve in. 
+        Not only did it improve my health but it improved all of those things stated above. Confidence, health, discipline, and more.
+      </p>
+
+      <h3 class="figure-block">Why Do You Workout?</h3>
+      <form class="form-border">
+        <div class="form-group">
+          <label for="nametwo">Name:</label>
+          <input type="text" id="nametwo" name="nametwo" placeholder="enter your name....">
+        </div>
+        <div class="form-group">
+          <label for="emailtwo">Email:</label>
+          <input type="email" id="emailtwo" name="emailtwo" placeholder="enter your email....">
+        </div>
+        
+        <div class="form-group">
+          <label for="whyworkout">Why do you workout?:</label>
+          <input type="text" id="whyworkout" name="whyworkout" placeholder="Enter your reason....">
+        
+        </div>
+        
+        <input type="submit" value="Submit">
+      </form>
+      
+    </section>
+    
+
+    
   </main>
   
 
   <footer>
-    <h3>RANDOM SAMPLE TEXT IN FOOTER</h3>
-    footer text
-
-    WHAT PROMPTS DID I USE?
-    : What sort of colors should I use to align the crap principals with my links and background and 
-    other colors on the site here is my basic outline so far does it achieve a few of the assingmnets goals?
+    <p class="footer-p">Created By<a href="../fpsoftware.co/index.html">FPSoftware &copy;</a></p>
   </footer>
-
   <script>
+
+    const showSection = (sectionId) => {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach((section) => {
+        section.classList.add('hidden');
+        section.classList.remove('active');
+      });
+
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.remove('hidden');
+      selectedSection.classList.add('active');
+
+    };
+
+    window.onload = function() {
+      showSection('what');
+    };
+
 
   </script>
 
 </body>
 </html>
+
+
+<!--
+
+AI PROMPTS CSS: 
+  1. How do i style the p tag to go under the figure of each respective element but still maintain this 3 grid layout? 
+  2. How Do i make the design responsive so when we minimize the screen the images become grid 1 ?
+
+AI PROMPTS General Assignment Questions: 
+  1. What sort of colors should I use to align the crap principals with my links and background
+  2. Here is my basic outline so far does it achieve a few of the assingmnets goals?
+  3. If I want to create a form that asks users what time they workout at the gym should it be left aligned or should it be centered based on CRAP principals ?
+
+AI PROMPTS JS: 
+  1. How can I create a onclick function that adds and removes the active and hidden css classes in my code
+
+-->

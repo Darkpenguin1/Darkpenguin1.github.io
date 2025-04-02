@@ -14,7 +14,7 @@ header {
   text-align: center;
 }
 
-header h1 {
+.heading-one {
   margin: 0;
   font-size: 36px;
   font-weight: bold;
@@ -27,7 +27,7 @@ main {
   text-align: center;
 }
 
-main h2 {
+.heading-two {
   color: #7B9EFF;
   font-size: 30px;
   margin-bottom: 20px;

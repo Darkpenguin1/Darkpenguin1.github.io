@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ITIS-3135-052 ~ Frank Peraza ~ Ferocious Penguin ~ Form Assignmet</title>
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/byo.css">
+	</head>
+
+
+	<body>
+
+		<header>
+			<div data-include="components/header.html"></div>
+		</header>
+
+		<main>
+			<h2>Form Assignment</h2>
+			<h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+      <form id="form">
+        <label for="name">Name</label>
+        <input id="name" value="Frank " name="name" type="text"/>
+
+        <label for="mascot">Mascot</label>
+        <input id="mascot" value="Ferocious Penguin" name="mascot" type="text"/>
+
+        <!--Image field here-->
+        <label for="file">Image Upload</label>
+        <input type="file" name="file" id="file">
+
+        <label for="img-caption">Image Caption</label>
+        <input id="img-caption" value="Founder of Ferocious-Penguin-Enterprises" name="img-caption" type="text"/>
+
+        <label for="personal-background">Personal Background</label>
+        <input id="personal-background" value="I am 18 with a junior standing studying computer science. I was born in New York but raised in Charlotte." name="personal-background" type="text"/>
+
+        <label for="professional-background">Professional Background</label>
+        <input id="professional-background" value="I have recently accepted an offer to join AWS this summer as a solutions architect intern." name="professional-background" type="text"/>
+
+        <label for="academic-background">Academic Background</label>
+        <input id="academic-background" value="I went to a middle college for highschool so I graduated with my associates degree and have taken a few cs courses there." name="academic-background" type="text"/>
+
+        <label for="background-web">Background in Web Development</label>
+        <input id="background-web" value="I have made a few web applications with tailwind css and html mostly skipping over the fundementals though" name="background-web" type="text"/>
+
+        <label for="comp-platform">Primary Computer Platform</label>
+        <input id="comp-platform" value="Windows lenovo laptop." name="comp-platform" type="text"/>
+
+        <!--Courses currently taken-->
+        <div id="courses-container">
+          <label>Courses Currently Taken</label>
+        </div>
+        <button type="button" onclick="addCourse()">Add Course</button>
+        <div id="courses-div">
+
+        </div>
+        <div id="hidden-div"></div>
+
+        <label for="funny-thing">Funny Thing</label>
+        <input id="funny-thing" value="I like penguins" name="funny-thing" type="text"/>
+
+        <label for="anything-else">Anything Else?</label>
+        <input id="anything-else" value="I enjoy going to the gym." name="anything-else" type="text"/>
+
+        <div class="check-box-container">
+          <label for="agreement" >
+            "I understand that what is on this page is not password protected and I will not put anything 
+            here that I don’t want publicly available."
+          </label>
+          <input type="checkbox" name="agreement" id="agreement" checked/>
+
+        </div>
+        <div class="check-box-container">
+          <input type="submit" value="Submit">
+          <input type="reset" onclick="resetForm()" value="Reset">
+
+        </div>
+
+      </form>
+
+		</main>
+		
+		<footer>
+			<div data-include="components/footer.html"></div>
+		</footer>
+
+		<script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/survey.js"></script>
+
+
+
+
+	</body>
+
+
+	
+</html>
+
+<!--Change this page for home page assignment-->
