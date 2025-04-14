@@ -1,7 +1,7 @@
 body {
     background-color: azure;
     margin: 0;
-    text-align: center;
+    
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -66,4 +66,29 @@ th, td {
 table {
   margin: 10px 50px;
   border-spacing: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+main p{
+  padding: 0px 22px;
+  margin: 10px;
+}
+
+h3 {
+  padding: 0px 22px;
+  margin: 10px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+li {
+  padding: 5px 0px;
 }
