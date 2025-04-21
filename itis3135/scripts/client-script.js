@@ -12,6 +12,11 @@ function showSlides(n) {
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        let numberText = slides[i].querySelector(".numbertext");
+        
+        if (numberText) {
+            numberText.textContent = `${i + 1} / ${slides.length}`;
+        }   
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
